@@ -3,11 +3,13 @@
 }
 
 h1{
-	color: white;
-	font-size: 84px;
+	color: gray;
+	font-size: 144px;
 	font-weight: 300;
 	margin: auto;
 	width: 50%;
+	text-align: center;
+	padding-top: 100px;
 }
 
 /*By default, it repeats horizontally and vertically. This makes it only repeat on the y axis, vertically*/
