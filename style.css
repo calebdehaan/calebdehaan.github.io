@@ -10,7 +10,7 @@ h1{
 	width: 50%;
 }
 
-//By default, it repeats horizontally and vertically. This makes it only repeat on the y axis, vertically
+/*By default, it repeats horizontally and vertically. This makes it only repeat on the y axis, vertically*/
 body{
 	background-image: url(./img/bean.jpg), url(./img/lake-michigan.jpg);
 	background-repeat: repeat-y, repeat-y;
