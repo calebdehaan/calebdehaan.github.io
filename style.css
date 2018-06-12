@@ -1,121 +1,109 @@
 *{
-
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	padding: 0px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 0px;
 }
 
 
 
-
+/*grabbed the following a code from stackoverflow*/
 a:link    {
-	/* Applies to all unvisited links */
-	text-decoration:  none;
-	font-weight:      bold;
-	background-color: none;
-	color:            white;
+    /* Applies to all unvisited links */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: none;
+    color:            white;
 } 
 a:visited {
-	/* Applies to all visited links */
-	text-decoration:  none;
-	font-weight:      bold;
-	background-color: none;
-	color:            white;
+    /* Applies to all visited links */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: none;
+    color:            white;
 } 
 a:hover   {
-	/* Applies to links under the pointer */
-	text-decoration:  none;
-	font-weight:      bold;
-	background-color: none;
-	color:            white;
+    /* Applies to links under the pointer */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: none;
+    color:            white;
 } 
 a:active  {
-	/* Applies to activated links */
-	text-decoration:  none;
-	font-weight:      bold;
-	background-color: none;
-	color: white;
+    /* Applies to activated links */
+    text-decoration:  none;
+    font-weight:      bold;
+    background-color: none;
+    color: white;
 } 
 
 h1{
-
-	color: white;
-
-	font-size: 10vw;
-
-	letter-spacing: -8px;
-	font-weight: 800;
-
-	margin: auto;
-
-	width: 30%;
-
-	text-align: left;
-
-	padding-top: .5em;
-	position: fixed;
-	justify-content: center;
-	line-height: 90%;
+    color: white;
+    font-size: 10vw;
+    letter-spacing: -8px;
+    font-weight: 800;
+    margin: auto;
+    width: 30%;
+    text-align: left;
+    padding-top: .5em;
+    position: fixed;
+    justify-content: center;
+    line-height: 90%;
 
 
 }
 
 
 body{
-
-		
-	background-image: url(./img/sears-tower.jpg);
-
-	background-repeat: no-repeat;
-
-	background-size: cover;
-
-	background-attachment: fixed;
-	position: fixed;
-	height: 100vh;
-	width: 100vw;
-	min-height: 100vh;
-	padding-bottom: 20px;
+    background-image: url(./img/sears-tower.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 20px;
 }
 
 ul{
-	color: white;
-	font-size: 3em;
-	font-weight: 300;
-	margin: auto;
-	padding-top: .5em;
-	text-align: right;
-	padding-right: .5em;
-	width: 90%;
-	list-style-type: none;
+    color: white;
+    font-size: 3em;
+    font-weight: 300;
+    margin: auto;
+    padding-top: .5em;
+    text-align: right;
+    padding-right: .5em;
+    width: 90%;
+    list-style-type: none;
 }
 
 .resume-option{
-	transition: font-size .25s;
+    transition: font-size .25s;
 }
 .photography-option{
-	transition: font-size .25s;	
+    transition: font-size .25s; 
 }
 .github-option{
-	transition: font-size .25s;	
+    transition: font-size .25s; 
 }
 .contact-option{
-	transition: font-size .25s;	
+    transition: font-size .25s; 
 }
 
 .resume-option:hover{
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .photography-option:hover{
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .github-option:hover{
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .contact-option:hover{
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 
