@@ -67,7 +67,7 @@ body{
 
 ul{
     color: white;
-    font-size: 3em;
+    font-size: 5em;
     font-weight: 300;
     margin: auto;
     padding-top: .5em;
@@ -77,35 +77,13 @@ ul{
     list-style-type: none;
 }
 
-.resume-option{
+.option{
     transition: font-size .25s;
 }
-.photography-option{
-    transition: font-size .25s; 
-}
-.github-option{
-    transition: font-size .25s; 
-}
-.contact-option{
-    transition: font-size .25s; 
-}
 
-.resume-option:hover{
+.option:hover{
     font-size: 1.5em;
 }
-
-.photography-option:hover{
-    font-size: 1.5em;
-}
-
-.github-option:hover{
-    font-size: 1.5em;
-}
-
-.contact-option:hover{
-    font-size: 1.5em;
-}
-
 
 
 
