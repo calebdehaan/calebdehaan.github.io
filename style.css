@@ -1,37 +1,37 @@
 *{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    padding: 0px;
+    padding: 0;
 }
 
 
 
 /*grabbed the following a code from stackoverflow*/
-a:link    {
+.option:link    {
     /* Applies to all unvisited links */
     text-decoration:  none;
     font-weight:      bold;
-    background-color: none;
+    background-color: transparent;
     color:            white;
-} 
-a:visited {
+}
+.option:visited {
     /* Applies to all visited links */
     text-decoration:  none;
     font-weight:      bold;
-    background-color: none;
+    background-color: transparent;
     color:            white;
-} 
-a:hover   {
+}
+.option:hover   {
     /* Applies to links under the pointer */
     text-decoration:  none;
     font-weight:      bold;
-    background-color: none;
+    background-color: transparent;
     color:            white;
-} 
-a:active  {
+}
+.option:active  {
     /* Applies to activated links */
     text-decoration:  none;
     font-weight:      bold;
-    background-color: none;
+    background-color: transparent;
     color: white;
 } 
 
@@ -47,8 +47,6 @@ h1{
     position: fixed;
     justify-content: center;
     line-height: 90%;
-
-
 }
 
 
@@ -65,7 +63,7 @@ body{
     padding-bottom: 20px;
 }
 
-ul{
+.options{
     color: white;
     font-size: 5em;
     font-weight: 300;
@@ -86,4 +84,99 @@ ul{
 }
 
 
+
+
+.icon {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Oswald';
+    display: block;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    width: 60px;
+    text-align: center;
+
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+
+    height:54px;
+    cursor:pointer;
+    overflow:hidden;
+
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+
+.icon:active {
+    -webkit-transform: translate(0, 3px);
+    -moz-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+}
+
+
+.icon#twitter-small{
+    -webkit-box-shadow: 0 6px 0 #2695BC;
+    -moz-box-shadow: 0 6px 0 #2695BC;
+    box-shadow: 0 6px 0 #2695BC;
+}
+.icon#twitter-small{background:#2CA9E1 url("./img/twitter.png") no-repeat center center;}
+.icon#twitter-small:active{ -webkit-box-shadow: 0 2px 0 #2695BC;
+    -moz-box-shadow: 0 2px 0 #2695BC;
+    box-shadow: 0 2px 0 #2695BC;
+}
+
+
+
+.icon#facebook-small{
+    -webkit-box-shadow: 0 6px 0 #293F63;
+    -moz-box-shadow: 0 6px 0 #293F63;
+    box-shadow: 0 6px 0 #293F63;
+}
+.icon#facebook-small{background:#3B5997 url("./img/facebook.png") no-repeat center center;}
+.icon#facebook-small:active{ -webkit-box-shadow: 0 2px 0 #293F63;
+    -moz-box-shadow: 0 2px 0 #293F63;
+    box-shadow: 0 2px 0 #293F63;
+}
+
+
+
+.icon#linkedin-small{
+    -webkit-box-shadow: 0 6px 0 #005377;
+    -moz-box-shadow: 0 6px 0 #005377;
+    box-shadow: 0 6px 0 #005377;
+}
+.icon#linkedin-small{background:#0073B2 url("./img/linkedin.png") no-repeat center center;}
+.icon#linkedin-small:active{ -webkit-box-shadow: 0 2px 0 #005377;
+    -moz-box-shadow: 0 2px 0 #005377;
+    box-shadow: 0 2px 0 #005377;
+}
+
+#menu-outer {
+    height: 84px;
+}
+
+.table {
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+}
+
+ul#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+ul#horizontal-list li {
+    display: inline;
+}
 
