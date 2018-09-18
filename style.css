@@ -55,7 +55,7 @@ h1{
 body{
     background-image: url(./img/sears-tower.jpg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% auto !important;
     background-attachment: fixed;
 
     position: fixed;
