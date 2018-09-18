@@ -3,7 +3,9 @@
     padding: 0;
 }
 
-
+div#main-container{
+    padding-right: 5em;
+}
 
 /*grabbed the following a code from stackoverflow*/
 .option:link    {
@@ -70,7 +72,8 @@ body{
     margin: auto;
     padding-top: .5em;
     text-align: right;
-    padding-right: .5em;
+    //padding-right: .5em;
+    float: right;
     width: 90%;
     list-style-type: none;
 }
@@ -83,19 +86,14 @@ body{
     font-size: 1.5em;
 }
 
-
-
-
 .icon {
     position: relative;
-    color: #ffffff;
     text-decoration: none;
-    font-family: 'Oswald';
     display: block;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
-    width: 60px;
+    width: 100px;
     text-align: center;
 
     -webkit-transform: translate(0, 0);
@@ -104,11 +102,10 @@ body{
 
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease;
 
-    height:54px;
+    height:75px;
     cursor:pointer;
     overflow:hidden;
 
@@ -162,21 +159,28 @@ body{
     box-shadow: 0 2px 0 #005377;
 }
 
-#menu-outer {
+div#menu-outer {
     height: 84px;
+    justify-content: right;
 }
 
 .table {
     display: table;   /* Allow the centering to work */
     margin: 0 auto;
+    float: right;
 }
 
 ul#horizontal-list {
     min-width: 696px;
     list-style: none;
     padding-top: 20px;
+    justify-content: right;
+    float: right;
+    font-weight: 300;
 }
 ul#horizontal-list li {
-    display: inline;
+    display: inline-block;
+    float: right;
+    padding-left: 10px;
 }
 
