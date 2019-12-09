@@ -53,7 +53,7 @@ h1{
 
 
 body{
-    background-image: url(./img/sears-tower.jpg);
+    background-image: url(static/img/sears-tower.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -126,7 +126,7 @@ body{
     -moz-box-shadow: 0 6px 0 #2695BC;
     box-shadow: 0 6px 0 #2695BC;
 }
-.icon#twitter-small{background:#2CA9E1 url("./img/twitter.png") no-repeat center center;}
+.icon#twitter-small{background:#2CA9E1 url("static/img/twitter.png") no-repeat center center;}
 .icon#twitter-small:active{ -webkit-box-shadow: 0 2px 0 #2695BC;
     -moz-box-shadow: 0 2px 0 #2695BC;
     box-shadow: 0 2px 0 #2695BC;
@@ -139,7 +139,7 @@ body{
     -moz-box-shadow: 0 6px 0 #293F63;
     box-shadow: 0 6px 0 #293F63;
 }
-.icon#facebook-small{background:#3B5997 url("./img/facebook.png") no-repeat center center;}
+.icon#facebook-small{background:#3B5997 url("static/img/facebook.png") no-repeat center center;}
 .icon#facebook-small:active{ -webkit-box-shadow: 0 2px 0 #293F63;
     -moz-box-shadow: 0 2px 0 #293F63;
     box-shadow: 0 2px 0 #293F63;
@@ -152,7 +152,7 @@ body{
     -moz-box-shadow: 0 6px 0 #005377;
     box-shadow: 0 6px 0 #005377;
 }
-.icon#linkedin-small{background:#0073B2 url("./img/linkedin.png") no-repeat center center;}
+.icon#linkedin-small{background:#0073B2 url("static/img/linkedin.png") no-repeat center center;}
 .icon#linkedin-small:active{ -webkit-box-shadow: 0 2px 0 #005377;
     -moz-box-shadow: 0 2px 0 #005377;
     box-shadow: 0 2px 0 #005377;
