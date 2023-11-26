@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Netrunner Proxy Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="print-hide">
+
+  <h1>
+    Netrunner Proxy Generator
+  </h1>
+
+  <p>
+    Print Netrunner Proxy cards! Enter your card names into the sidebar, one card per line, and click print. Highly recommend printing in landscape. <br />
+    Credits go to <a href="https://netrunnerdb.com/" title="NetrunnerDB">netrunnerdb.com</a> and <a href="http://cardgamedb.com/" title="Card Game DB">cardgamedb.com</a> for providing the API and images, as well as Theavon on codepen for creating it. 
+	<br><br>
+	I simply stole it and updated the API it hits for the images to work with all images.
+	<br><br>
+	<a href="https://codepen.io/Theavon/pen/YQmgBG">Original URL for the codepen</a>
+  </p>
+
+  
+  <p>
+    <a class="btn" href="javascript:window.print();" title="Print">Print Cards</a>
+  </p>
+  
+  <textarea id="UserInput" name="UserInput" placeholder="Card Names" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus>
+Exchange of Information
+Desperado
+The Toolbox
+Grimoire
+</textarea>
+  
+</div>
+
+<div id="Cards"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
