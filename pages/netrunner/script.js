@@ -56,6 +56,7 @@ function fetchAllCards() {
     saveCards();
     buildList();
   });
+  console.log(_cardDB);
 }
 
 // buildList() generate image list
@@ -63,50 +64,104 @@ function buildList() {
   var html = '';
   var input = _userInputElem.val().toLowerCase().split(/\n/);
   var unfound = 0;
-  
+  var cardNames = [];
+
+  var skipLines = [
+    /^(event|hardware|resource|icebreaker|program) \(\d+\)$/, // Skip lines like 'Event (14)', 'Hardware (10)', etc.
+    /^\d+ influence spent.*$/, // Skip line with influence spent
+    /^\d+ cards \(min \d+\)$/, // Skip line with card count
+    /^cards up to.*$/ // Skip 'Cards up to' line
+  ];
+
   if (!_cardDB) {
     return false;
   }
-  
-  for (var i=0; i<input.length; i++) {
-    var cardname = $.trim(input[i]).replace(/:/g, '').replace(new RegExp(' ', 'g'), '__');	
-    
-    if (cardname == '') {		       
-      continue;		
+
+
+  // Check if the input matches the deck list format checking if it matches a given regex
+  var deckListFormat = input.some(function(line) {
+    return line.match(/\d{2} cards \(min \d{2}\)/);
+  });
+
+  // If the deck list format is detected, extract card names
+  if (deckListFormat) {
+	// Exclude the first line of input
+	input = input.slice(1);
+    for (var i = 0; i < input.length; i++) {
+        var line = input[i].trim();
+		var skipLine = false;
+
+		// Check if the line matches any of the skip patterns
+		for (var j = 0; j < skipLines.length; j++) {
+		  if (input[i].trim().match(skipLines[j])) {
+			skipLine = true;
+			break;
+		  }
+		}
+
+		if (skipLine) {
+		  continue; // Skip this line
+		}
+
+      var match = line.match(/(\d+x?\s)?([^(\n]+)(?:\s*\(.+\))?/);
+	  if (match) {
+		var cardName = match[2].trim();
+		
+        // Push the card name to the array as many times as specified (e.g., 3x card -> push 3 times)
+        var count = match[1] != null ? match[1].charAt(0) : 1;
+        for (var j = 0; j < count; j++) {
+          cardNames.push(cardName);
+        }
+      }
     }
-    
+  } else { // If not in deck list format, use previous logic to handle individual card names
+    for (var i = 0; i < input.length; i++) {
+      var cardname = $.trim(input[i]).replace(/:/g, '').replace(new RegExp(' ', 'g'), '__');
+
+      if (cardname == '') {
+        continue;
+      }
+
+      if (cardname in _cardDB) {
+        cardNames.push(input[i]); // Push individual card names to the cardNames array
+      } else {
+        unfound++;
+      }
+    }
+  }
+
+  // Build HTML for each card name in cardNames array
+  for (var k = 0; k < cardNames.length; k++) {
+    var cardname = cardNames[k].toLowerCase().replace(/:/g, '').replace(/\s/g, '__');
+
     if (cardname in _cardDB) {
       var card = _cardDB[cardname];
       var newCard = '';
 
       newCard += '<a href="https://netrunnerdb.com/en/card/' + card.code + '" title="" target="NetrunnerCard">';
       newCard += '<img class="card" src="' + card.image + '" alt="' + card.code + '" />';
-      newCard += '<span class="label print-hide">' + card.code + ' ' + cardname.replace(/__/g, ' ') + '</span>'; 
-      newCard += '</a>'; 
+      newCard += '<span class="label print-hide">' + card.code + ' ' + cardNames[k] + '</span>';
+      newCard += '</a>';
 
-      // console.log(JSON.stringify(card) + ' ' + cardname);
-      
-      // append
+      // Append card HTML
       html += newCard;
-      
-      // prepend
-      // html = newCard + html;
     } else {
       unfound++;
     }
   }
-  
+
   if (unfound > 0) {
     html += '<p class="no-print text-muted">' + unfound + ' not found</p>';
   }
-  
+
   if (_cardListHtml != html) {
-    // save current html
+    // Save current HTML
     _cardListHtml = html;
-    // show images html
+    // Show images HTML
     _cardListElem.html(_cardListHtml);
-  } 
-} 
+  }
+}
+
 
 // assignEvents() rebuild image list when textarea changes
 function assignEvents() {
