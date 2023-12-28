@@ -75,9 +75,11 @@ function buildList() {
     var skipLines = [
         /^(event|hardware|resource|icebreaker|program|sentry|code gate|barrier|upgrade|operation|asset|agenda) \(\d+\)$/, // Skip lines like 'Event (14)', 'Hardware (10)', etc.
         /^\d+ influence spent.*$/, // Skip line with influence spent
+		/^\d+ agenda points.*$/, // Skip line with agenda points
         /^\d+ cards \(min \d+\)$/, // Skip line with card count
         /^cards up to.*$/, // Skip 'Cards up to' line
-		/^decklist published on.*$/ // Skip 'Decklist published on netrunnerdb' line
+		/^decklist published on.*$/, // Skip 'Decklist published on netrunnerdb' line
+		/^deck built on.*$/ // Skip 'Deck built on netrunnerdb' line
     ];
 
     if (!_cardDB) {
