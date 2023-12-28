@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Netrunner Proxy Generator</title>
+  <title>Netrunner Deck Printer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../static/img/favicon.ico">
 
 </head>
 <body>
@@ -17,18 +20,31 @@
   <p>
     Print Netrunner Proxy cards! Enter your card names into the sidebar, one card per line, and click print. Highly recommend printing in landscape. <br />
     Credits go to <a href="https://netrunnerdb.com/" title="NetrunnerDB">netrunnerdb.com</a> and <a href="http://cardgamedb.com/" title="Card Game DB">cardgamedb.com</a> for providing the API and images, as well as Theavon on codepen for creating it. 
+	<br>
+	<a href="https://codepen.io/Theavon/pen/YQmgBG">Original URL for the codepen</a>
 	<br><br>
 	I simply stole it and updated the API it hits for the images to work with all images, as well as implemented functionality to directly paste from the .txt deck export from netrunnerdb.com. That works well now using horrid parsing. Please don't look through the source code for it hehe it is quick and dirty.
 	<br><br>
-	<a href="https://codepen.io/Theavon/pen/YQmgBG">Original URL for the codepen</a>
+	
+	There are multiple different inputs available for selection. The default input format requires each card to have its own entry in the text box on the left, as is shown by default. The Jinteki.net input format is if you export a netrunnerdb deck to the Jinteki.net format. The .txt output format is if you export a netrunnerdb deck to the text file format. Pretty straightforward, but if you have any issues, just reach out to Caleb lol. 
   </p>
 
+  <p>Please select input type from below options:</p>
+  <div id="JnetWarning"></div>
+  <div>
+    <input type="radio" id="default" name="input" value="default" checked="checked">
+    <label for="default">Default input</label>
+    <input type="radio" id="jnet" name="input" value="jnet">
+    <label for="jnet">Jinteki.net input</label>
+    <input type="radio" id="txt" name="input" value="txt">
+    <label for="txt">.txt output input</label>
+  </div>
   
   <p>
     <a class="btn" href="javascript:window.print();" title="Print">Print Cards</a>
   </p>
-  
   <textarea id="UserInput" name="UserInput" placeholder="Card Names" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus>
+  
 Exchange of Information
 Desperado
 The Toolbox
